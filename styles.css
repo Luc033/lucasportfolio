@@ -1,0 +1,579 @@
+:root {
+  /* CSS HEX */
+  --h1: #264653;
+  --h2: #264653;
+  --h3: #264653;
+  --p: ;
+  --header: #264653;
+  --header-p: #ffffff;
+  --main: #e5e5e5ff;
+  --section: ;
+  --intro: ;
+  --portfolio: ;
+  --projects: white;
+  --about: ;
+  --hobbies: ;
+  --edu: ;
+  --footer: #14213dff;
+  --footer-p: white;
+  --contact: ;
+  --footer-btn: #fca311ff;
+  --box-shadow-1: #06bee1ff;
+  --box-shadow-2: #fca311ff;
+  --box-shadow-3: ;
+  --box-shadow-4: ;
+  --header-hover: #fca311ff;
+  --btn-hover: #86a5d9ff;
+  --i-hover: ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  max-width: 100%;
+  text-align: center;
+  background-color: var(--header);
+  box-shadow: black 0px 5px 3px 3px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+header nav ul li {
+  margin: 0;
+}
+
+header nav ul li a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0.8em;
+  color: var(--header-p);
+  text-shadow: rgba(0, 0, 0, 0.377) 0.4px 0.4px 3px;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  background-color: var(--header-hover);
+  text-shadow: rgba(0, 0, 0, 0.377) 0.4px 0.4px 3px;
+}
+header nav ul li a i{
+  font-size: x-large;
+  margin-right: 0.3rem;
+}
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  background: rgb(229,229,229);
+  background: linear-gradient(176deg, rgb(229, 229, 229) 10%, rgb(211, 212, 214) 52%);
+}
+section {
+  background-color: var(--section);
+}
+
+#portfolio p,
+#about p,
+#education p {
+  text-align: justify;
+}
+
+h1 {
+  font-size: 22pt;
+  color: var(--h1);
+  margin: 0.5em;
+}
+
+h2 {
+  font-size: 18pt;
+  color: var(--h2);
+  text-align: center;
+}
+
+h3 {
+  font-size: 16pt;
+  color: var(--h3);
+}
+
+h4 {
+  font-size: 14pt;
+}
+
+#intro {
+  margin: 2em 0;
+  width: 100%;
+}
+
+#intro img {
+  border-radius: 50%;
+  border: rgb(58, 58, 58) solid 10px;
+  width: 25%;
+  margin: 1em;
+}
+
+#portfolio {
+  width: 100%;
+}
+#portfolio .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#portfolio h1 {
+  color: var(--h1);
+  text-shadow: rgba(0, 0, 0, 0.356) 1px 1px 2px;
+  padding: 1em 0;
+  text-align: center;
+}
+
+#portfolio .project {
+  background-color: var(--projects);
+  margin: 2em;
+  padding: 1em;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.308) 1px 1px 10px;
+  box-sizing: border-box;
+}
+
+.project img {
+  background-size: contain;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
+}
+
+.img-about {
+  border-radius: 25% 10%;
+  border: rgba(0, 0, 0, 0.397) solid 2px;
+  box-shadow: var(--box-shadow-1) 10px 15px;
+}
+.div-hobbies {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro-edu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1em;
+  width: 100%;
+}
+.h3-education {
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /*text-shadow: 1px 1px 10px rgb(176, 251, 0);*/
+}
+
+.intro-edu img {
+  width: 100%;
+  height: 20vh;
+}
+#education h2 {
+  margin: 2rem 0;
+}
+#education > p {
+  margin: auto;
+  max-width: 80%;
+  text-indent: 2em;
+}
+
+#education ol {
+  margin: 2rem;
+  max-width: 85%;
+}
+
+#education ol > li {
+  margin: 3% 0 1% 0;
+}
+#education ul {
+  margin-bottom: 5%;
+  max-width: 95%;
+}
+#education ul > li {
+  margin: 1% 0 1% 0;
+}
+#education li {
+  margin-bottom: 1%;
+}
+#education ul,
+#education ol {
+  margin-left: 5%;
+}
+footer {
+  background: var(--footer);
+  text-align: center;
+  color: var(--footer-p);
+  max-width: 100%;
+  padding: 3em;
+}
+#contact {
+  max-width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2em;
+  align-items: center;
+  background: var(--contact);
+  color: var(--footer-p);
+}
+footer h1{
+  color: var(--footer-btn);
+  text-shadow: var(--box-shadow-1) 1px 1px 3px;
+}
+#contact form {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  background: var(--contact);
+}
+
+#contact form label {
+  margin-top: 10px;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 300px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contact form textarea {
+  height: 10vh;
+}
+
+#contact form button {
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: var(--footer-btn);
+  color: var(--footer-p);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact form button:hover {
+  background-color: var(--btn-hover);
+}
+.div-link-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 2em;
+}
+
+footer a i {
+ font-size: 2.5rem;
+ color: white;
+}
+footer a i:hover {
+ color: var(--btn-hover);
+}
+@media (max-width: 799px) {
+  section {
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+  #portfolio .project {
+    width: calc(100% - 40px);
+  }
+  .div-about-intro {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+    text-indent: 2em;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    gap: 1em;
+    justify-content: center;
+  }
+
+  .h1-about {
+    text-align: center;
+  }
+
+  .img-about {
+    width: 65%;
+  }
+  .about-texto {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-indent: 2em;
+    gap: 1em;
+  }
+  .about-text-end {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    text-indent: 2em;
+    gap: 1em;
+  }
+
+  .div-hobbie {
+    padding: 1em 0 2.5em 0;
+    position: relative;
+  }
+
+  .div-hobbie img {
+    width: 100vw;
+  }
+
+  .div-hobbie h3 {
+    position: absolute;
+    margin: auto;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.788);
+  }
+
+  .div-hobbie-text {
+    margin: auto;
+    padding-top: 2em;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-indent: 2em;
+  }
+  #education {
+    width: 100%;
+  }
+  .intro-edu img {
+    width: 100vw;
+    height: 10vh;
+  }
+}
+@media (min-width: 800px) and (max-width: 999px) {
+  section .padding {
+    padding: 2% 1%;
+  }
+  .div-about-intro {
+    margin: 0 2em;
+    display: flex;
+    flex-direction: row;
+    text-indent: 2em;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+  }
+  .img-about {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1em;
+  }
+  .h1-about {
+    padding-right: 2em;
+    text-align: right;
+  }
+  .about-texto {
+    flex: 1;
+    padding: 10px;
+  }
+  .about-texto {
+    max-width: 100%;
+  }
+  .about-text-end {
+    width: 85%;
+  }
+  .div-hobbie:nth-child(3) {
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-indent: 2em;
+    text-align: right;
+  }
+  .div-hobbie:nth-child(3) h3 {
+    padding-right: 2em;
+  }
+
+  .div-hobbie:nth-child(2n) {
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-indent: 2em;
+  }
+
+  .div-hobbie:nth-child(3) img,
+  .div-hobbie:nth-child(2n) img {
+    margin-top: 18%;
+  }
+  .div-hobbie picture {
+    width: 40%;
+    display: inline-block;
+  }
+
+  .div-hobbie-text {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .div-hobbie img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  section .padding {
+    padding: 2% 1%;
+  }
+  section {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .div-about-intro {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    text-indent: 2em;
+    padding: 0 4em;
+  }
+  .h1-about {
+    padding: 2em 0 1em;
+    text-align: center;
+  }
+  .img-about {
+    width: 25%;
+  }
+  .about-texto {
+    padding-left: 2em;
+  }
+  .about-text-end {
+    padding-left: 2em;
+  }
+  .div-hobbie:nth-child(3) {
+    margin: 0.5rem 0;
+    padding: 1rem 1rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    text-indent: 2em;
+    text-align: right;
+  }
+  .div-hobbie:nth-child(3) img {
+    margin-top: 12%;
+    border-radius: 25% 10% 5% 10%;
+    border: var(--box-shadow-1) solid 1px;
+    box-shadow: var(--box-shadow-1) -10px 2px;
+    opacity: 0.9;
+  }
+  .div-hobbie:nth-child(2n) img {
+    margin-top: 12%;
+    border-radius: 10% 25% 10% 5%;
+    border: var(--box-shadow-2) solid 1px;
+    box-shadow: var(--box-shadow-2) 10px 2px;
+  }
+}
+.div-hobbie:nth-child(3) h3 {
+  padding-right: 2em;
+}
+
+.div-hobbie:nth-child(2n) {
+  margin: 0.5rem 0;
+  padding: 1rem 1rem;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-indent: 2em;
+}
+
+.div-hobbie picture {
+  width: 40%;
+  display: inline-block;
+}
+
+.div-hobbie-text {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.div-hobbie img {
+  max-width: 100%;
+}
+#education {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 75% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
