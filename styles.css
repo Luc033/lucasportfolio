@@ -1,32 +1,65 @@
 :root {
-  /* CSS HEX */
+  /* 
+  Informações da paleta de cores utilizas no projeto.
+
+  Link direto de referência:
+  https://coolors.co/palette/10002b-240046-3c096c-5a189a-7b2cbf-9d4edd-c77dff-e0aaff
+
+  Paleta em HEX :
+  --russian-violet: #10002bff;
+  --russian-violet-2: #240046ff;
+  --persian-indigo: #3c096cff;
+  --tekhelet: #5a189aff;
+  --french-violet: #7b2cbfff;
+  --amethyst: #9d4eddff;
+  --heliotrope: #c77dffff;
+  --mauve: #e0aaffff;
+  --deep-orange: #f84545;
+  --orange: #fa0000;
+*/
+
+  /* Variáveis para armazenar as cores do projeto*/
   --h1: #264653;
   --h2: #264653;
   --h3: #264653;
-  --p: ;
-  --header: #264653;
-  --header-p: #ffffff;
-  --main: #e5e5e5ff;
-  --section: ;
-  --intro: ;
-  --portfolio: ;
+  --header: #10002b;
+  --header-p: white;
+  --intro-p: white;
+  --portfolio: linear-gradient(
+    176deg,
+    rgb(229, 229, 229) 10%,
+    rgb(226, 227, 228) 52%
+  );
   --projects: white;
-  --about: ;
-  --hobbies: ;
-  --edu: ;
-  --footer: #14213dff;
-  --footer-p: white;
-  --contact: ;
-  --footer-btn: #fca311ff;
-  --box-shadow-1: #06bee1ff;
+  --about-h1: conic-gradient(#f48566 30%, #fa0000 40%, #f84545 70%);
+  --about-h2: conic-gradient(#f48566 10%, #fa0000 50%, #f84545 70%, #ffffff);
+  --about-h3: #f84545;
+  --about-p: #10002b;
+  --about-bg-p: linear-gradient(
+    176deg,
+    rgb(229, 229, 229) 10%,
+    rgb(226, 227, 228) 52%
+  );
+  --bg-about: url(img/definitivas/bg-neon-city.jpg);
+  --bg-edu: url(img/definitivas/edu-g-blur.jpg);
+  --edu-h1: rgb(223, 220, 246);
+  --edu-ol: #e0aaff;
+  --edu-p: white;
+  --footer: linear-gradient(to right, #eea849, #f46b45);
+  --footer-h1: #3c096c;
+  --footer-p: #3c096c;
+  --footer-btn: #5a189a;
+  --footer-btn-p: white;
+  --box-shadow-1: #e0aaff;
   --box-shadow-2: #fca311ff;
-  --box-shadow-3: ;
-  --box-shadow-4: ;
-  --header-hover: #fca311ff;
-  --btn-hover: #86a5d9ff;
-  --i-hover: ;
+  --header-hover: #e0aaff;
+  --btn-hover: red;
 }
 
+/* Importação da fonte utilizada neste projeto */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset na margin e padding de todos os elementos*/
 * {
   margin: 0;
   padding: 0;
@@ -34,27 +67,35 @@
 html {
   font-size: 16px;
 }
+
+/*Fonte do projeto sendo definida*/
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*
+  Header
+*/
 header {
-  max-width: 100%;
+  width: 100%;
   text-align: center;
   background-color: var(--header);
-  box-shadow: black 0px 5px 3px 3px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.605);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 header nav ul {
-  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 4rem;
+  list-style: none;
 }
 
 header nav ul li {
@@ -64,75 +105,230 @@ header nav ul li {
 header nav ul li a {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-  padding: 0.8em;
+  gap: 0.3em;
+  padding: 0.5em;
   color: var(--header-p);
-  text-shadow: rgba(0, 0, 0, 0.377) 0.4px 0.4px 3px;
+  text-shadow: 0px 0px 2px white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 200;
 }
 header nav ul li a:hover {
-  background-color: var(--header-hover);
-  text-shadow: rgba(0, 0, 0, 0.377) 0.4px 0.4px 3px;
+  text-shadow: var(--header-hover) 0px 0px 10px;
 }
-header nav ul li a i{
+header nav ul li a i {
   font-size: x-large;
   margin-right: 0.3rem;
 }
+
+/*
+  Main
+*/
 main {
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  background: rgb(229,229,229);
-  background: linear-gradient(176deg, rgb(229, 229, 229) 10%, rgb(211, 212, 214) 52%);
-}
-section {
-  background-color: var(--section);
 }
 
+/* Padrão do tamanho da fonte dos titulos e parágrafos*/
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+p {
+  font-size: 14pt;
+}
 #portfolio p,
 #about p,
 #education p {
   text-align: justify;
 }
 
-h1 {
-  font-size: 22pt;
-  color: var(--h1);
-  margin: 0.5em;
-}
-
-h2 {
-  font-size: 18pt;
-  color: var(--h2);
-  text-align: center;
-}
-
-h3 {
-  font-size: 16pt;
-  color: var(--h3);
-}
-
-h4 {
-  font-size: 14pt;
-}
+/* 
+  INTRO
+*/
 
 #intro {
-  margin: 2em 0;
+  padding: 6em 0 4em 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #240046;
+  background-image: linear-gradient(135deg, #240046 0%, #10002b 100%);
+}
+.intro-p {
+  color: var(--intro-p);
 }
 
 #intro img {
   border-radius: 50%;
-  border: rgb(58, 58, 58) solid 10px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   width: 25%;
   margin: 1em;
 }
 
+/*
+  ABOUT
+*/
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+  position: relative;
+  background: #834d9b;
+  background: -webkit-linear-gradient(to bottom, #d04ed6, #834d9b);
+}
+.bg-about {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  background-image: var(--bg-about);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: blur(2px);
+}
+
+#about h1 {
+  background-image: var(--about-h1);
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  margin: auto;
+}
+/*
+  HOBBIES
+*/
+.div-hobbies h2 {
+  background-image: var(--about-h2);
+  color: transparent;
+  background-clip: text;
+}
+.div-hobbie-text h3 {
+  background: var(--about-bg-p);
+  color: var(--about-h3);
+  text-shadow: rgba(0, 0, 0, 0.283) 0 0 2px;
+}
+.about-p {
+  color: var(--about-p);
+  text-shadow: rgba(0, 0, 0, 0.192) 1px 1px 4px;
+}
+.div-about-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  background: var(--about-bg-p);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 2em 1em;
+}
+
+.div-hobbie {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.div-hobbie-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+/*
+  EDUCATION
+*/
+.no-padding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.no-padding p {
+  color: var(--edu-p);
+}
+.no-padding h2,
+.no-padding h3,
+.no-padding h4 {
+  color: var(--edu-h2);
+}
+.h1-education {
+  background: linear-gradient(179deg, black 50%, transparent);
+  width: 100vw;
+  height: auto;
+  padding-top: 15em;
+  padding-bottom: 2em;
+  text-align: center;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.564);
+  color: var(--edu-h1);
+}
+
+.intro-edu {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  background-image: var(--bg-edu);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+#education > p {
+  max-width: 80%;
+}
+#education ol {
+  color: var(--edu-ol);
+  width: 80%;
+}
+#education ol > li {
+  margin-top: 3%;
+}
+#education ul {
+  max-width: 80%;
+}
+#education ul > li {
+}
+#education li {
+  margin: 1% 0 1.5% 2%;
+}
+#education ul,
+#education ol {
+  margin-left: 5%;
+}
+
+/*
+  PORTFOLIO
+*/
+
 #portfolio {
   width: 100%;
+  background: var(--portfolio);
 }
 #portfolio .projects {
   display: flex;
@@ -158,86 +354,20 @@ h4 {
 
 .project img {
   background-size: contain;
-  max-width: 100%;
+  width: 100%;
   background-repeat: no-repeat;
 }
 
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: none;
-}
+/*
+  FOOTER
+*/
 
-.img-about {
-  border-radius: 25% 10%;
-  border: rgba(0, 0, 0, 0.397) solid 2px;
-  box-shadow: var(--box-shadow-1) 10px 15px;
-}
-.div-hobbies {
-  margin: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.intro-edu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 1em;
-  width: 100%;
-}
-.h3-education {
-  width: 100%;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /*text-shadow: 1px 1px 10px rgb(176, 251, 0);*/
-}
-
-.intro-edu img {
-  width: 100%;
-  height: 20vh;
-}
-#education h2 {
-  margin: 2rem 0;
-}
-#education > p {
-  margin: auto;
-  max-width: 80%;
-  text-indent: 2em;
-}
-
-#education ol {
-  margin: 2rem;
-  max-width: 85%;
-}
-
-#education ol > li {
-  margin: 3% 0 1% 0;
-}
-#education ul {
-  margin-bottom: 5%;
-  max-width: 95%;
-}
-#education ul > li {
-  margin: 1% 0 1% 0;
-}
-#education li {
-  margin-bottom: 1%;
-}
-#education ul,
-#education ol {
-  margin-left: 5%;
-}
 footer {
-  background: var(--footer);
   text-align: center;
   color: var(--footer-p);
   max-width: 100%;
   padding: 3em;
+  background: var(--footer);
 }
 #contact {
   max-width: 100%;
@@ -250,10 +380,13 @@ footer {
   background: var(--contact);
   color: var(--footer-p);
 }
-footer h1{
-  color: var(--footer-btn);
+footer h1 {
+  color: var(--footer-h1);
   text-shadow: var(--box-shadow-1) 1px 1px 3px;
 }
+/*
+  FORM
+*/
 #contact form {
   padding: 1em;
   display: flex;
@@ -282,7 +415,7 @@ footer h1{
   margin-top: 20px;
   border: none;
   background-color: var(--footer-btn);
-  color: var(--footer-p);
+  color: var(--footer-btn-p);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -299,46 +432,37 @@ footer h1{
 }
 
 footer a i {
- font-size: 2.5rem;
- color: white;
+  font-size: 2.5rem;
+  color: white;
 }
 footer a i:hover {
- color: var(--btn-hover);
+  color: var(--btn-hover);
 }
-@media (max-width: 799px) {
+
+/*
+  Responsividade para celulares e tablets pequenos
+*/
+@media (max-width: 768px) {
   section {
-    padding: 1em 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  header nav ul {
-    flex-direction: column;
-  }
-
-  header nav ul li {
-    margin: 5px 0;
-  }
-  #portfolio .project {
-    width: calc(100% - 40px);
-  }
+  /*
+    ABOUT
+  */
   .div-about-intro {
+    margin: 1em;
     display: flex;
     flex-direction: column;
-    max-width: 85%;
-    text-indent: 2em;
     align-items: center;
     align-content: center;
+    justify-content: center;
     flex-wrap: nowrap;
     gap: 1em;
-    justify-content: center;
+    border-radius: 1.5em;
   }
-
-  .h1-about {
-    text-align: center;
-  }
-
   .img-about {
     width: 65%;
   }
@@ -346,159 +470,90 @@ footer a i:hover {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    text-indent: 2em;
     gap: 1em;
   }
   .about-text-end {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    text-indent: 2em;
     gap: 1em;
   }
 
+  /*
+    HOBBIES
+  */
+  .div-hobbies h2 {
+    text-align: center;
+    border-radius: 1.5em 1.5em 0 0;
+    margin: 2em 0 1em 0;
+  }
+
   .div-hobbie {
-    padding: 1em 0 2.5em 0;
-    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5em;
+    background: var(--about-bg-p);
   }
 
   .div-hobbie img {
     width: 100vw;
+    border-radius: 1.5em 1.5em 0 0;
   }
 
   .div-hobbie h3 {
-    position: absolute;
-    margin: auto;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.788);
+    text-align: center;
+  }
+  .div-hobbie-text {
+    align-items: center;
   }
 
-  .div-hobbie-text {
-    margin: auto;
-    padding-top: 2em;
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-indent: 2em;
+  .div-hobbie p {
+    width: 90vw;
   }
-  #education {
-    width: 100%;
-  }
+
+  /*
+    EDUCATION
+  */
   .intro-edu img {
     width: 100vw;
     height: 10vh;
   }
-}
-@media (min-width: 800px) and (max-width: 999px) {
-  section .padding {
-    padding: 2% 1%;
-  }
-  .div-about-intro {
-    margin: 0 2em;
-    display: flex;
-    flex-direction: row;
-    text-indent: 2em;
-    align-items: stretch;
-    flex-wrap: wrap;
-    width: auto;
-    justify-content: center;
-  }
-  .img-about {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    padding: 1em;
-  }
-  .h1-about {
-    padding-right: 2em;
-    text-align: right;
-  }
-  .about-texto {
-    flex: 1;
-    padding: 10px;
-  }
-  .about-texto {
-    max-width: 100%;
-  }
-  .about-text-end {
-    width: 85%;
-  }
-  .div-hobbie:nth-child(3) {
-    margin: 0.5rem 0;
-    padding: 1rem 1rem;
-    max-width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    text-indent: 2em;
-    text-align: right;
-  }
-  .div-hobbie:nth-child(3) h3 {
-    padding-right: 2em;
-  }
 
-  .div-hobbie:nth-child(2n) {
-    margin: 0.5rem 0;
-    padding: 1rem 1rem;
-    max-width: 90%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-content: center;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: nowrap;
-    text-indent: 2em;
-  }
-
-  .div-hobbie:nth-child(3) img,
-  .div-hobbie:nth-child(2n) img {
-    margin-top: 18%;
-  }
-  .div-hobbie picture {
-    width: 40%;
-    display: inline-block;
-  }
-
-  .div-hobbie-text {
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .div-hobbie img {
-    max-width: 100%;
+  /*
+    PORTFOLIO
+  */
+  #portfolio .project {
+    width: calc(100% - 40px);
   }
 }
 
-@media (min-width: 1000px) {
+/*
+  Responsividade para tablets grandes e computadores
+*/
+@media (min-width: 769px) {
   section .padding {
     padding: 2% 1%;
-  }
-  section {
     max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+  /*
+    ABOUT
+  */
   .div-about-intro {
+    width: 90%;
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-around;
-    text-indent: 2em;
-    padding: 0 4em;
+    border-radius: 2em 0 0 2em;
   }
-  .h1-about {
+  #about h1 {
     padding: 2em 0 1em;
     text-align: center;
   }
@@ -507,73 +562,84 @@ footer a i:hover {
   }
   .about-texto {
     padding-left: 2em;
+    width: 33%;
   }
   .about-text-end {
     padding-left: 2em;
+    width: 33%;
   }
+
+  /*
+    HOBBIES
+  */
+  .div-hobbies {
+    margin: 4rem 0;
+    display: block;
+  }
+
+  .div-hobbies h2 {
+    text-align: center;
+  }
+
+  /* HOBBIE PAR*/
   .div-hobbie:nth-child(3) {
-    margin: 0.5rem 0;
+    margin: 1.5rem 0 1.5rem 10%;
     padding: 1rem 1rem;
     max-width: 90%;
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: nowrap;
-    text-indent: 2em;
+    gap: 2em;
     text-align: right;
+    border-radius: 2em 0 0 2em;
+    background: var(--about-bg-p);
+  }
+  .div-hobbie:nth-child(3) h3 {
+    padding-right: 2em;
   }
   .div-hobbie:nth-child(3) img {
-    margin-top: 12%;
     border-radius: 25% 10% 5% 10%;
-    border: var(--box-shadow-1) solid 1px;
-    box-shadow: var(--box-shadow-1) -10px 2px;
+    box-shadow: #f02eaa66 -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px,
+      rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px,
+      rgba(240, 46, 170, 0.05) -25px 25px;
     opacity: 0.9;
   }
-  .div-hobbie:nth-child(2n) img {
-    margin-top: 12%;
-    border-radius: 10% 25% 10% 5%;
-    border: var(--box-shadow-2) solid 1px;
-    box-shadow: var(--box-shadow-2) 10px 2px;
+  /* HOBBIE ÍMPAR*/
+  .div-hobbie:nth-child(2n) {
+    max-width: 90%;
+    margin: 1.5rem 10% 1.5rem 0;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 2em;
+    border-radius: 0 2em 2em 0;
+    background: var(--about-bg-p);
   }
-}
-.div-hobbie:nth-child(3) h3 {
-  padding-right: 2em;
-}
+  .div-hobbie:nth-child(2n) img {
+    border-radius: 10% 25% 10% 5%;
+    box-shadow: #f02eaa66 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+      rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+      rgba(240, 46, 170, 0.05) 25px 25px;
+    opacity: 0.9;
+  }
+  .div-hobbie-text {
+    width: 50%;
+  }
+  .div-hobbie picture {
+    max-width: 100%;
+  }
 
-.div-hobbie:nth-child(2n) {
-  margin: 0.5rem 0;
-  padding: 1rem 1rem;
-  max-width: 90%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  text-indent: 2em;
-}
-
-.div-hobbie picture {
-  width: 40%;
-  display: inline-block;
-}
-
-.div-hobbie-text {
-  max-width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-
-.div-hobbie img {
-  max-width: 100%;
-}
-#education {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 75% !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /*
+  EDUCATION
+*/
+  #education > p {
+    width: 80%;
+  }
 }

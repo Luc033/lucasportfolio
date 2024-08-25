@@ -6,7 +6,7 @@
     Notas: 
         - Esta página é responsiva, utilizando media queries no CSS.
         - O formulário de contato ainda não está funcional; a implementação será feita em breve.
-        - As imagens com caráter pessoal utilizadas neste projetos foram adiquiridas do acervo pessoal do desenvolvedor, as demais imagens não tem direitos autorais e estão disponíveis no site freepik.com 
+        - As imagens com caráter pessoal utilizadas neste projetos foram adiquiridas do acervo pessoal do desenvolvedor, as demais imagens são de livre acesso e estão disponíveis no site freepik.com 
 -->
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -16,77 +16,46 @@
     <title>Portfólio</title>
     <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/2ca9804ec8.js" crossorigin="anonymous"></script>
+    <!-- Link para fonte do projeto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- 
         Header: Contém a navegação principal do site.
-        O logo é clicável e leva de volta à página inicial.
     -->
     <header>
       <nav>
         <ul>
-          <li><a href="sobreMim.html"> <i class="fa-solid fa-circle-user"></i> Sobre mim</a></li>
-          <li><a href="formacao.html"><i class="fa-solid fa-book"></i> Formação</a></li>
-          <li><a href="portfolio.html"><i class="fa-solid fa-file-lines"></i> Portfólio</a></li>
-          <li><a href="contato.html"><i class="fa-solid fa-address-book"></i> Contato</a></li>
+          <li><a href="#about"> <i class="fa-solid fa-circle-user"></i> Sobre mim</a></li>
+          <li><a href="#education"><i class="fa-solid fa-book"></i> Formação</a></li>
+          <li><a href="#portfolio"><i class="fa-solid fa-file-lines"></i> Portfólio</a></li>
+          <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contato</a></li>
         </ul>
       </nav>
     </header>
     <!-- 
-        Main: Contém o conteúdo principal da página subdividada em 4 section, sendo elas: Introdução, Sobre mim, Formação e Portfólio.
-        A seção de Sobre mim inclui uma descrição pessoal do desenvolvedor deste projeto.
+        Main: Contém o conteúdo principal da página subdividada em 4 section, sendo elas: intro, about, education e portfolio.
+        Sendo a intro um breve apresentação e a seção about inclui uma descrição pessoal do desenvolvedor deste projeto. Education descreve as formação acadêmica e competências e portfolio ilustra alguns projetos realizados.
+        
     -->
     <main>
       <section id="intro" class="padding">
         <img src="img/perfil.png" alt="Foto de perfil" />
-        <p>Seja muito bem-vindo ao meu Portfólio</p>
-        <p>Me chamo Lucas Melo, futuro Java Fullstack Developer.</p>
+        <p class="intro-p">Seja muito bem-vindo ao meu Portfólio</p>
+        <p class="intro-p">Me chamo Lucas Melo, futuro <strong>Java Web Fullstack Developer</strong>.</p>
       </section>
-      <!--
-        A seção Portfólio descreve e ilustra 4 projetos de desenvolvimento em um slide show automático, desenvolvido em Javascript.
-      -->
-      <section id="portfolio" class="padding">
-        <h1>Portfólio</h1>
-        <div class="projects">
-          <div class="project">
-            <img src="img/exemple.png" alt="" />
-            <h2>Projeto 1</h2>
-            <p>Descrição do projeto 1.</p>
-          </div>
-          <div class="project">
-            <img src="img/exemple.png" alt="" />
-            <h2>Projeto 2</h2>
-            <p>Descrição do projeto 2.</p>
-          </div>
-          <div class="project">
-            <img src="img/exemple.png" alt="" />
-            <h2>Projeto 3</h2>
-            <p>Descrição do projeto 3.</p>
-          </div>
-          <div class="project">
-            <img src="img/exemple.png" alt="Foto do Lucas de perfil" />
-            <h2>Projeto 4</h2>
-            <p>Descrição do projeto 4.</p>
-          </div>
-        </div>
-      </section>
-      <!--
-        A section Sobre mim fora subdividida em duas partes, sendo ela: Introdução e Hobbies.
-      -->
       <section id="about" class="padding">
-        <!--
-          Foi optado em subdivir o flexbox da Introdução em 3 elementos (img-about, about-texto, about-text-end). A imagem utilizada trata-se de uma fotografia pessoal do desenvolvedor.
-        -->
-        <h1 class="h1-about">Sobre mim</h1>
-        <div class="div-about-intro">
-          <img
+        <div class="bg-about"
+        ></div>
+          <h1>Sobre mim</h1>
+          <div class="div-about-intro">
+            <img
             class="img-about"
-            src="img/editadas/perfil-g-600w.png"
+            src="img/definitivas/perfil-definitiva.png"
             alt="Foto minha de perfil e óculos"
           />
           <div class="about-texto">
-            <p>
+            <p class="about-p">
               Oi! Eu sou um estudante do litoral sul paulista, tenho 24 anos e
               sou meio que um nerd da tecnologia. Atualmente, estou mergulhado
               no curso de Análise e Desenvolvimento de Sistemas na UNINTER. Ah,
@@ -94,7 +63,7 @@
               também me formei em Administração.
             </p>
 
-            <p>
+            <p class="about-p">
               Para não ficar só na teoria, fui atrás de várias certificações em
               redes de computadores, desenvolvimento e administração. Sempre
               quis entender como tudo funciona, desde os cabos até as linhas de
@@ -106,7 +75,7 @@
               novo.
             </p>
 
-            <p>
+            <p class="about-p">
               Agora, meu grande objetivo é trabalhar com Java Web. Estou
               estudando com muita garra, estabelecendo metas claras, criando
               hábitos saudáveis e traçando planos detalhados para chegar lá.
@@ -118,7 +87,7 @@
             </p>
           </div>
           <div class="about-text-end">
-            <p>
+            <p class="about-p">
               Mas nem só de estudo vive o homem, certo? Tenho muitos outros
               interesses e sonhos. Um deles é explorar o mundo! Quero participar
               de grandes eventos de tecnologia, conhecer as últimas inovações e
@@ -126,14 +95,14 @@
               principais lançamentos, ver as novidades em primeira mão e trocar
               ideias com os maiores nomes da tecnologia? Isso seria incrível!
             </p>
-            <p>
+            <p class="about-p">
               Também sonho em viajar pelo Brasil. Nosso país é cheio de culturas
               fascinantes, e eu quero conhecer cada uma delas. De norte a sul,
               cada região tem suas particularidades e belezas únicas.
               Experimentar comidas típicas, ouvir histórias locais e vivenciar
               tradições diferentes é algo que me motiva muito.
             </p>
-            <p>
+            <p class="about-p">
               Enquanto isso não acontece, tenho alguns hobbies que me ajudam a
               relaxar e me divertir. Adoro passar tempo com meus amigos, seja
               jogando videogame, assistindo filmes ou simplesmente conversando
@@ -157,16 +126,16 @@
               />
               <source
                 media="(min-width: 769px)"
-                srcset="img/tinified/music-photoshop.jpg"
+                srcset="img/definitivas/music-photoshop.jpg"
               />
               <img
-                src="img/tinified/music-photoshop.jpg"
+                src="img/definitivas/music-photoshop.jpg"
                 alt="imagem de um violão."
               />
             </picture>
             <div class="div-hobbie-text">
               <h3>Música</h3>
-              <p>
+              <p class="about-p">
                 Uma das minhas maiores paixões é, sem dúvida, a música. Desde
                 cedo, eu já amava ouvir música. Naquela época, eu não tinha
                 muito acesso à internet, por isso o meu contato com outras
@@ -176,7 +145,7 @@
                 divertir tocando também.
               </p>
 
-              <p>
+              <p class="about-p">
                 Comecei minha jornada musical estudando guitarra por um bom
                 tempo. Depois, mergulhei no canto, no canto coral e até na
                 flauta, para finalmente chegar ao violão. No violão, explorei
@@ -185,7 +154,7 @@
                 artistas sensacionais!
               </p>
 
-              <p>
+              <p class="about-p">
                 Hoje em dia, não consigo passar um dia sem ouvir música. Estudo
                 no meu violão todos os dias e estou totalmente mergulhado no
                 gospel. Música é minha companhia constante e sempre vai ser uma
@@ -201,16 +170,16 @@
               />
               <source
                 media="(min-width: 769px)"
-                srcset="img/tinified/books-photshopt.jpg"
+                srcset="img/definitivas/books-photshopt.jpg"
               />
               <img
-                src="img/tinified/books-photshopt.jpg"
+                src="img/definitivas/books-photshopt.jpg"
                 alt="imagem de vários livros."
               />
             </picture>
             <div class="div-hobbie-text">
               <h3>Leitura</h3>
-              <p>
+              <p class="about-p">
                 Ah, falar sobre meu gosto por leitura é sempre um prazer! Desde
                 muito jovem, os livros têm sido meus melhores companheiros,
                 especialmente aqueles do gênero fantasia. Quem me conhece sabe
@@ -220,7 +189,7 @@
                 inesquecíveis.
               </p>
 
-              <p>
+              <p class="about-p">
                 A saga de Harry Potter, com suas aulas em Hogwarts, criaturas
                 mágicas e batalhas épicas entre o bem e o mal, é algo que me
                 fascina profundamente. Cada livro é uma porta de entrada para
@@ -229,7 +198,7 @@
                 levo para a vida.
               </p>
 
-              <p>
+              <p class="about-p">
                 Já J.R.R. Tolkien, com sua incrível habilidade de criar
                 universos inteiros, me conquistou de uma maneira única. "O
                 Senhor dos Anéis" e "O Hobbit" são verdadeiras obras-primas que
@@ -239,7 +208,7 @@
                 prendem a cada página.
               </p>
 
-              <p>
+              <p class="about-p">
                 Além disso, recentemente, tenho explorado novos formatos de
                 leitura, como mangás e manhwas. Esses estilos, originários do
                 Japão e da Coreia do Sul, respectivamente, têm me proporcionado
@@ -248,7 +217,7 @@
                 histórias.
               </p>
 
-              <p>
+              <p class="about-p">
                 Mangás como "Jujutsu Kaisen" e "One Piece" têm me mantido
                 cativado com suas tramas envolventes e personagens bem
                 desenvolvidos. Os manhwas, por sua vez, me surpreenderam com a
@@ -256,7 +225,7 @@
                 como "Solo Leveling" e "Tower of God".
               </p>
 
-              <p>
+              <p class="about-p">
                 Ler, para mim, é mais do que um hobby; é uma forma de viver
                 outras vidas, conhecer novos mundos e entender diferentes
                 perspectivas. Seja em um livro de fantasia, um mangá ou um
@@ -273,17 +242,17 @@
               />
               <source
                 media="(min-width: 769px)"
-                srcset="img/tinified/food-photoshop.jpg"
+                srcset="img/definitivas/food-photoshop.jpg"
               />
               <img
-                src="img/tinified/food-photoshop.jpg"
+                src="img/definitivas/food-photoshop.jpg"
                 alt="imagem de vários pratos de comida. "
               />
             </picture>
             <div class="div-hobbie-text">
-              <h3>Gastronomia</h3>
-              <p>
-                Ah, a gastronomia! É uma paixão que eu tenho, mesmo que, admito,
+              <h3>Culinária</h3>
+              <p class="about-p">
+                Ah, a culinária! É uma paixão que eu tenho, mesmo que, admito,
                 não seja exatamente um mestre na cozinha. A verdade é que,
                 enquanto meu talento culinário pode deixar um pouco a desejar,
                 meu amor por comida é absolutamente inabalável. Eu sou o tipo de
@@ -291,17 +260,16 @@
                 explorar diferentes sabores e, claro, comer bem!
               </p>
 
-              <p>
+              <p class="about-p">
                 Eu posso não ser o rei das panelas e frigideiras, mas isso não
                 me impede de me deliciar com pratos incríveis. Sempre que vejo
                 um prato novo ou uma receita interessante, a minha mente começa
                 a viajar. Eu fico pensando em como seria gostoso provar aquela
                 comida, mesmo que, na prática, eu acabe apenas experimentando em
-                um restaurante ou pedindo para alguém mais habilidoso preparar
-                para mim.
+                um restaurante.
               </p>
 
-              <p>
+              <p class="about-p">
                 Além disso, adoro conhecer a culinária de diferentes culturas.
                 Cada país tem suas peculiaridades, e é fascinante ver como os
                 ingredientes e os métodos de preparo variam. Desde pratos
@@ -310,7 +278,7 @@
                 sempre pronto para uma nova aventura gastronômica.
               </p>
 
-              <p>
+              <p class="about-p">
                 Claro, não posso esquecer dos meus momentos na cozinha, tentando
                 criar algo com as minhas próprias mãos. Às vezes, o resultado é
                 uma verdadeira obra-prima; outras vezes, bem... digamos que é
@@ -320,7 +288,7 @@
                 satisfazer minha paixão pela comida.
               </p>
 
-              <p>
+              <p class="about-p">
                 Então, enquanto continuo a minha jornada gastronômica, sempre
                 estou aberto a novas descobertas e prazeres culinários. Afinal,
                 a cozinha pode não ser o meu forte, mas o prazer de comer é algo
@@ -331,157 +299,175 @@
         </div>
       </section>
       <section id="education" class="no-padding">
-        <div class="intro-edu">
-          <picture>
-            <source
-              media="(max-width: 768px)"
-              srcset="img/tinified/education-photoshop-p-2.jpg"
-            />
-            <source
-              media="(min-width: 769px)"
-              srcset="img/education-photoshop-m-2.jpg"
-            />
-            <img
-              src="img/education-photoshop-m-2.jpg"
-              alt="imagem de uma tela de computador mostrando um dev codando."
-            />
-          </picture>
-          <h2 class="h3-education">Formação Acadêmica e Cursos Relevantes</h2>
-        </div>
-        <p>
-          Tenho como objetivo me tornar um desenvolvedor Java fullstack web,
-          combinando habilidades front-end e back-end. Acredito que a paixão, o
+        <div >
+          </div>
+            <div class="intro-edu"
+            ></div>
+            <h1 class="h1-education">Formação Acadêmica e Cursos Relevantes</h1>
+            <p>
+              Tenho como objetivo me tornar um desenvolvedor Java fullstack web,
+              combinando habilidades front-end e back-end. Acredito que a paixão, o
           aprendizado contínuo e a colaboração em equipe são os pilares para
           alcançar esse objetivo.
-        </p>
-        <p>
           Agradeço pela oportunidade de compartilhar minha jornada e estou
           ansioso para contribuir ainda mais no mundo do desenvolvimento Java
           fullstack.<span>&#x1F680; &#x1F9D1;&#x1F3FD;&#x200D;&#x1F4BB;</span>
         </p>
-        <ol>
-          <li>
-            <h3>Análise e Desenvolvimento de Sistemas - UNINTER (2024):</h3>
-          </li>
-          <ul>
+          <ol>
             <li>
-              <p>
-                Atualmente estou cursando Análise e Desenvolvimento de Sistemas
-                pela UNINTER, aprendo desde os fundamentos da computação e
-                lógica de programação até tópicos avançados como inteligência
-                artificial e computação em nuvem.
-              </p>
-            </li>
-
-            <li>
-              <p>
-                Desenvolvo habilidades em programação web e mobile, segurança da
-                informação e gestão de startups. Também estudo engenharia de
-                software e métodos ágeis para trabalhar eficientemente em
-                projetos.
-              </p>
-            </li>
-            <li>
-              <p>
-                As disciplinas eletivas me permitem explorar áreas como big data
-                e blockchain, proporcionando uma formação prática e abrangente
-                para criar soluções tecnológicas inovadoras.
-              </p>
-            </li>
-          </ul>
-          <li>
-            <h4>Desenvolvimento de Sistemas - ETEC (2023):</h4>
-          </li>
-          <ul>
-            <li>
-              <p>
-                Curso técnico que oferece uma formação completa em tecnologia da
-                informação.
-              </p>
-            </li>
-            <li>
-              <p>
-                Aprendi a desenvolver sistemas em diversas linguagens de
-                programação, principalmente java, análise de sistemas, segurança
-                da informação e banco de dados, cobrindo desde os fundamentos
-                até o desenvolvimento avançado de software web e mobile.
-              </p>
-            </li>
-            <li>
-              <p>
-                O currículo também inclui disciplinas de design digital,
-                sistemas embarcados e ética organizacional, o que me preparou
-                para criar e gerenciar sistemas eficientes, seguros e éticos no
-                mercado de trabalho de TI.
-              </p>
-            </li>
-          </ul>
-          <li>
-            <h3>Cursos na Alura (2024):</h3>
-          </li>
-          <ul>
-            <li>
-              <h4>Java: Trabalhando com Listas e Coleções de Dados</h4>
+              <h2>Análise e Desenvolvimento de Sistemas - UNINTER (2024):</h2>
             </li>
             <ul>
               <li>
                 <p>
-                  Aprofundei meu conhecimento em estruturas de dados e
-                  manipulação de listas e coleções.
+                  Atualmente estou cursando Análise e Desenvolvimento de Sistemas
+                  pela UNINTER, aprendo desde os fundamentos da computação e
+                  lógica de programação até tópicos avançados como inteligência
+                  artificial e computação em nuvem.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Desenvolvo habilidades em programação web e mobile, segurança da
+                  informação e gestão de startups. Também estudo engenharia de
+                  software e métodos ágeis para trabalhar eficientemente em
+                  projetos.
+                </p>
+              </li>
+              <li>
+                <p>
+                  As disciplinas eletivas me permitem explorar áreas como big data
+                  e blockchain, proporcionando uma formação prática e abrangente
+                  para criar soluções tecnológicas inovadoras.
                 </p>
               </li>
             </ul>
             <li>
-              <h4>Java: Trabalhando com Lambdas, Streams e Spring Framework</h4>
+              <h2>Desenvolvimento de Sistemas - ETEC (2023):</h2>
             </li>
             <ul>
               <li>
                 <p>
-                  Introduzi-me ao Spring Framework, uma ferramenta poderosa para
-                  desenvolvimento Java.
+                  Curso técnico que oferece uma formação completa em tecnologia da
+                  informação.
                 </p>
               </li>
               <li>
                 <p>
-                  Criar projetos, modelar dados, manipular coleções com streams
-                  e gerar estatísticas, culminando na aplicação prática desses
-                  conceitos avançados.
+                  Aprendi a desenvolver sistemas em diversas linguagens de
+                  programação, principalmente java, análise de sistemas, segurança
+                  da informação e banco de dados, cobrindo desde os fundamentos
+                  até o desenvolvimento avançado de software web e mobile.
+                </p>
+              </li>
+              <li>
+                <p>
+                  O currículo também inclui disciplinas de design digital,
+                  sistemas embarcados e ética organizacional, o que me preparou
+                  para criar e gerenciar sistemas eficientes, seguros e éticos no
+                  mercado de trabalho de TI.
                 </p>
               </li>
             </ul>
             <li>
-              <h4>Java: Aplicando a Orientação a Objetos</h4>
+              <h2>Cursos na Alura (2024):</h2>
             </li>
             <ul>
               <li>
-                <p>
-                  Fortaleci minha compreensão dos princípios de POO (Programação
-                  Orientada a Objetos), modelando aplicações, controlando o
-                  acesso aos dados, reutilizando características e aplicando
-                  comportamentos comuns, consolidando esses conceitos para o
-                  desenvolvimento de software eficiente e organizado.
-                </p>
+                <h3>Java: Trabalhando com Listas e Coleções de Dados</h3>
               </li>
-            </ul>
-            <li>
-              <h4>
-                Java: consumindo API, gravando arquivos e lidando com erros
-              </h4>
-            </li>
-            <ul>
+              <ul>
+                <li>
+                  <p>
+                    Aprofundei meu conhecimento em estruturas de dados e
+                    manipulação de listas e coleções.
+                  </p>
+                </li>
+              </ul>
               <li>
-                <p>
-                  Como interagir com APIs externas, usar bibliotecas, tratar
-                  exceções e gravar dados em arquivos, consolidando esses
-                  conhecimentos para criar aplicações robustas.
-                </p>
+                <h3>Java: Trabalhando com Lambdas, Streams e Spring Framework</h3>
               </li>
+              <ul>
+                <li>
+                  <p>
+                    Introduzi-me ao Spring Framework, uma ferramenta poderosa para
+                    desenvolvimento Java.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Criar projetos, modelar dados, manipular coleções com streams
+                    e gerar estatísticas, culminando na aplicação prática desses
+                    conceitos avançados.
+                  </p>
+                </li>
+              </ul>
+              <li>
+                <h3>Java: Aplicando a Orientação a Objetos</h3>
+              </li>
+              <ul>
+                <li>
+                  <p>
+                    Fortaleci minha compreensão dos princípios de POO (Programação
+                    Orientada a Objetos), modelando aplicações, controlando o
+                    acesso aos dados, reutilizando características e aplicando
+                    comportamentos comuns, consolidando esses conceitos para o
+                    desenvolvimento de software eficiente e organizado.
+                  </p>
+                </li>
+              </ul>
+              <li>
+                <h3>
+                  Java: consumindo API, gravando arquivos e lidando com erros
+                </h3>
+              </li>
+              <ul>
+                <li>
+                  <p>
+                    Como interagir com APIs externas, usar bibliotecas, tratar
+                    exceções e gravar dados em arquivos, consolidando esses
+                    conhecimentos para criar aplicações robustas.
+                  </p>
+                </li>
+              </ul>
             </ul>
-          </ul>
-          <li><h3>E mais de 30 outros cursos em áreas correlatas...</h3></li>
-        </ol>
+            <li><h2>E mais de 30 outros cursos em áreas correlatas...</h2></li>
+          </ol>
+      </section>
+      <section id="portfolio" class="padding">
+        <h1>Portfólio</h1>
+        <div class="projects">
+          <div class="project">
+            
+            <img src="img/portfolio/calculadora-iss.png" alt="Imagem mostra um campo com valores escritos e do outro lado um campo mostrando o resultado do cálculo destes valores." />
+            <h2>Calculadora de ISS</h2>
+            <p>Sistema para cálculo de tributos de alvarás de construção e demolição da cidade de Mongaguá/SP.</p>
+            <p>HTML5 | CSS3 | JS <a href="https://iss-calculadora.netlify.app/iss-js/iss com demolicao//" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+          </div>
+          <div class="project">
+            <img src="img/portfolio/hardware-and-cia.png" alt="Imagem mostra a página inicial de um Ecommerce com seus produtos a venda." />
+            <h2>Hardware & CIA</h2>
+            <p>Projeto feito em equipe de um Ecommerce de dispositivos eletrônicos.</p>
+            <p>HTML5 | CSS3 | JS | PHP | SQL <a href="https://luc033.github.io/Hardware-and-Cia/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+          </div>
+          <div class="project">
+            <img src="img/portfolio/sistema-bancario.png" alt="Imagem mostra o menu de um sistea bancário." />
+            <h2>Sistema bancário</h2>
+            <p>Um sistema com funções básicas de um banco.</p>
+            <p>JAVA <a href="https://github.com/Luc033/desafio-sistema-bancario" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+          </div>
+          <div class="project">
+            <img src="img/portfolio/via-cep.png" alt="Foto do Lucas de perfil" />
+            <h2>API CEP</h2>
+            <p>Utilizando API para retornar o endereço completo através do CEP fornecido.</p>
+            <p>JAVA <a href="https://github.com/Luc033/via-cep" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+          </div>
+        </div>
       </section>
     </main>
+    <!-- 
+      Footer: Contém algumas formas de contato: um formulário para envio de mensagem direta ao desenvolverdo do projeto, links do Github e Linkedin.
+    -->
     <footer>
       <h1>Contato</h1>
       <section id="contact">
@@ -498,11 +484,11 @@
           <button type="submit">Enviar</button>
         </form>
         <div class="div-link-contact">
-          <a target="_blank" href="https://www.linkedin.com/in/lucas-melo-dev"
-            ><i class="fa-brands fa-linkedin"></i>
+          <a style="text-decoration: none; color: white;" target="_blank" href="https://www.linkedin.com/in/lucas-melo-dev"
+            >Linkedin
           </a>
-          <a target="_blank" href="https://www.github.com/Luc033">
-            <i class="fa-brands fa-square-github fa-xx"></i>
+          <a style="text-decoration: none; color: white;" target="_blank" href="https://www.github.com/Luc033">
+            Github
           </a>
           <p>&copy; 2024. Todos os direitos reservados.</p>
         </div>
