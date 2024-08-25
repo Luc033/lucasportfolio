@@ -581,7 +581,9 @@ footer a i:hover {
     text-align: center;
   }
 
-  /* HOBBIE PAR*/
+  /* HOBBIE PAR
+    Estiiza as classes 'div-hobbie' alinhando à esquerda e demais estilizações
+  */
   .div-hobbie:nth-child(3) {
     margin: 1.5rem 0 1.5rem 10%;
     padding: 1rem 1rem;
@@ -607,7 +609,9 @@ footer a i:hover {
       rgba(240, 46, 170, 0.05) -25px 25px;
     opacity: 0.9;
   }
-  /* HOBBIE ÍMPAR*/
+  /* HOBBIE ÍMPAR
+    Estiiza as classes 'div-hobbie' alinhando à direita e demais estilizações
+  */
   .div-hobbie:nth-child(2n) {
     max-width: 90%;
     margin: 1.5rem 10% 1.5rem 0;
