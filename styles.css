@@ -77,7 +77,7 @@ body {
 }
 
 /*
-  Header
+  Header: contempla o menu de navegação
 */
 header {
   width: 100%;
@@ -121,7 +121,7 @@ header nav ul li a i {
 }
 
 /*
-  Main
+  Main: contempla todo o conteúdo principal
 */
 main {
   margin: auto;
@@ -158,7 +158,7 @@ p {
 }
 
 /* 
-  INTRO
+  INTRO: uma breve introdução do desenvolvedor do projeto
 */
 
 #intro {
@@ -185,7 +185,8 @@ p {
 }
 
 /*
-  ABOUT
+  ABOUT: contempla o conteúdo principal e é dividade em duas partes: 1º uma introdução (classe: div-about-intro) e 2º descrição dos hobbies (classe div-hobbie)
+    Sendo toda a seção com um fundo em parallax.
 */
 #about {
   display: flex;
@@ -217,7 +218,7 @@ p {
   margin: auto;
 }
 /*
-  HOBBIES
+  HOBBIES: descreve larguras e alturas, alinhamentos e cores para visualização em todos os dispositivos
 */
 .div-hobbies h2 {
   background-image: var(--about-h2);
@@ -257,7 +258,7 @@ p {
 }
 
 /*
-  EDUCATION
+  EDUCATION: o fundo é ilutrado por uma imagem em parallax. A transição entre esta section e a anterior, foi optado por fazer um gradiente no título principal da seção para fazer a transição de tonalidade e conteúdo. As listas desta seção foram estilizadas neste momento do CSS.
 */
 .no-padding {
   display: flex;
@@ -302,28 +303,19 @@ p {
 #education > p {
   max-width: 80%;
 }
-#education ol {
+#education ol{
   color: var(--edu-ol);
-  width: 80%;
 }
 #education ol > li {
   margin-top: 3%;
 }
-#education ul {
-  max-width: 80%;
-}
+
 #education ul > li {
 }
-#education li {
-  margin: 1% 0 1.5% 2%;
-}
-#education ul,
-#education ol {
-  margin-left: 5%;
-}
+
 
 /*
-  PORTFOLIO
+  PORTFOLIO: para melhor visualização do conteúdo, foi optado por fazer esta  seção de maneira minimalista. 
 */
 
 #portfolio {
@@ -359,7 +351,7 @@ p {
 }
 
 /*
-  FOOTER
+  FOOTER: larguras, alturas, cores e alinhamentos estilizados.
 */
 
 footer {
@@ -385,7 +377,7 @@ footer h1 {
   text-shadow: var(--box-shadow-1) 1px 1px 3px;
 }
 /*
-  FORM
+  FORM: larguras, alturas, cores e alinhamentos estilizados
 */
 #contact form {
   padding: 1em;
@@ -450,7 +442,7 @@ footer a i:hover {
   }
 
   /*
-    ABOUT
+    ABOUT: conteúdo ficará centralizado e a imagem ficará acima de todo o texto.
   */
   .div-about-intro {
     margin: 1em;
@@ -480,7 +472,7 @@ footer a i:hover {
   }
 
   /*
-    HOBBIES
+    HOBBIES: o início da div consta um imagem que largura total da tela para ilustrar o conteúdo que refe-se a div
   */
   .div-hobbies h2 {
     text-align: center;
@@ -513,17 +505,25 @@ footer a i:hover {
   .div-hobbie p {
     width: 90vw;
   }
-
   /*
-    EDUCATION
+    EDUCATION: dispõe da largura da lista
   */
-  .intro-edu img {
-    width: 100vw;
-    height: 10vh;
+  #education ol {
+    max-width: 85%;
+  }
+  #education ul {
+    max-width: 100%;
+  }
+  #education li {
+    margin: 1% 0 1.5% 0;
+  }
+  #education ul,
+  #education ol {
+    margin-left: 2%;
   }
 
   /*
-    PORTFOLIO
+    PORTFOLIO: largura da div dos projetos baseada em um cálculo
   */
   #portfolio .project {
     width: calc(100% - 40px);
@@ -543,7 +543,7 @@ footer a i:hover {
   }
 
   /*
-    ABOUT
+    ABOUT: conteúdo ficará mais para a direita
   */
   .div-about-intro {
     width: 90%;
@@ -570,7 +570,7 @@ footer a i:hover {
   }
 
   /*
-    HOBBIES
+    HOBBIES: ficará alternando entre mais para direita ou mais para esquerda
   */
   .div-hobbies {
     margin: 4rem 0;
@@ -582,7 +582,7 @@ footer a i:hover {
   }
 
   /* HOBBIE PAR
-    Estiiza as classes 'div-hobbie' alinhando à esquerda e demais estilizações
+    Estiiza as classes 'div-hobbie' alinhando à direita e demais estilizações
   */
   .div-hobbie:nth-child(3) {
     margin: 1.5rem 0 1.5rem 10%;
@@ -610,7 +610,7 @@ footer a i:hover {
     opacity: 0.9;
   }
   /* HOBBIE ÍMPAR
-    Estiiza as classes 'div-hobbie' alinhando à direita e demais estilizações
+    Estiiza as classes 'div-hobbie' alinhando à esquerda e demais estilizações
   */
   .div-hobbie:nth-child(2n) {
     max-width: 90%;
@@ -641,9 +641,22 @@ footer a i:hover {
   }
 
   /*
-  EDUCATION
+  EDUCATION: largura dos parágrafos
 */
   #education > p {
     width: 80%;
+  }
+  #education ol {
+    width: 80%;
+  }
+  #education ul {
+    max-width: 80%;
+  }
+  #education li {
+    margin: 1% 0 1.5% 2%;
+  }
+  #education ul,
+  #education ol {
+    margin-left: 5%;
   }
 }

@@ -17,7 +17,15 @@
     <!-- Link para o arquivo CSS externo -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Link para fonte do projeto -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link do fontawesome para adicionar ícones na página-->
+    <script
+      src="https://kit.fontawesome.com/2ca9804ec8.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- 
@@ -26,10 +34,24 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#about"> <i class="fa-solid fa-circle-user"></i> Sobre mim</a></li>
-          <li><a href="#education"><i class="fa-solid fa-book"></i> Formação</a></li>
-          <li><a href="#portfolio"><i class="fa-solid fa-file-lines"></i> Portfólio</a></li>
-          <li><a href="#contact"><i class="fa-solid fa-address-book"></i> Contato</a></li>
+          <li>
+            <a href="#about">
+              <i class="fa-solid fa-circle-user"></i> Sobre mim</a
+            >
+          </li>
+          <li>
+            <a href="#education"><i class="fa-solid fa-book"></i> Formação</a>
+          </li>
+          <li>
+            <a href="#portfolio"
+              ><i class="fa-solid fa-file-lines"></i> Portfólio</a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><i class="fa-solid fa-address-book"></i> Contato</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -42,14 +64,16 @@
       <section id="intro" class="padding">
         <img src="img/perfil.png" alt="Foto de perfil" />
         <p class="intro-p">Seja muito bem-vindo ao meu Portfólio</p>
-        <p class="intro-p">Me chamo Lucas Melo, futuro <strong>Java Web Fullstack Developer</strong>.</p>
+        <p class="intro-p">
+          Me chamo Lucas Melo, futuro
+          <strong>Java Web Fullstack Developer</strong>.
+        </p>
       </section>
       <section id="about" class="padding">
-        <div class="bg-about"
-        ></div>
-          <h1>Sobre mim</h1>
-          <div class="div-about-intro">
-            <img
+        <div class="bg-about"></div>
+        <h1>Sobre mim</h1>
+        <div class="div-about-intro">
+          <img
             class="img-about"
             src="img/definitivas/perfil-definitiva.png"
             alt="Foto minha de perfil e óculos"
@@ -298,169 +322,230 @@
           </div>
         </div>
       </section>
+      <!-- A section education foi utilizado listas dentro de listas para praticar seu uso -->
       <section id="education" class="no-padding">
-        <div >
-          </div>
-            <div class="intro-edu"
-            ></div>
-            <h1 class="h1-education">Formação Acadêmica e Cursos Relevantes</h1>
-            <p>
-              Tenho como objetivo me tornar um desenvolvedor Java fullstack web,
-              combinando habilidades front-end e back-end. Acredito que a paixão, o
+        <div></div>
+        <div class="intro-edu"></div>
+        <h1 class="h1-education">Formação Acadêmica e Cursos Relevantes</h1>
+        <p>
+          Tenho como objetivo me tornar um desenvolvedor Java fullstack web,
+          combinando habilidades front-end e back-end. Acredito que a paixão, o
           aprendizado contínuo e a colaboração em equipe são os pilares para
-          alcançar esse objetivo.
-          Agradeço pela oportunidade de compartilhar minha jornada e estou
-          ansioso para contribuir ainda mais no mundo do desenvolvimento Java
-          fullstack.<span>&#x1F680; &#x1F9D1;&#x1F3FD;&#x200D;&#x1F4BB;</span>
+          alcançar esse objetivo. Agradeço pela oportunidade de compartilhar
+          minha jornada e estou ansioso para contribuir ainda mais no mundo do
+          desenvolvimento Java fullstack.<span
+            >&#x1F680; &#x1F9D1;&#x1F3FD;&#x200D;&#x1F4BB;</span
+          >
         </p>
-          <ol>
+        <ol>
+          <li>
+            <h2>Análise e Desenvolvimento de Sistemas - UNINTER (2024):</h2>
+          </li>
+          <ul>
             <li>
-              <h2>Análise e Desenvolvimento de Sistemas - UNINTER (2024):</h2>
+              <p>
+                Atualmente estou cursando Análise e Desenvolvimento de Sistemas
+                pela UNINTER, aprendo desde os fundamentos da computação e
+                lógica de programação até tópicos avançados como inteligência
+                artificial e computação em nuvem.
+              </p>
+            </li>
+            <li>
+              <p>
+                Desenvolvo habilidades em programação web e mobile, segurança da
+                informação e gestão de startups. Também estudo engenharia de
+                software e métodos ágeis para trabalhar eficientemente em
+                projetos.
+              </p>
+            </li>
+            <li>
+              <p>
+                As disciplinas eletivas me permitem explorar áreas como big data
+                e blockchain, proporcionando uma formação prática e abrangente
+                para criar soluções tecnológicas inovadoras.
+              </p>
+            </li>
+          </ul>
+          <li>
+            <h2>Desenvolvimento de Sistemas - ETEC (2023):</h2>
+          </li>
+          <ul>
+            <li>
+              <p>
+                Curso técnico que oferece uma formação completa em tecnologia da
+                informação.
+              </p>
+            </li>
+            <li>
+              <p>
+                Aprendi a desenvolver sistemas em diversas linguagens de
+                programação, principalmente java, análise de sistemas, segurança
+                da informação e banco de dados, cobrindo desde os fundamentos
+                até o desenvolvimento avançado de software web e mobile.
+              </p>
+            </li>
+            <li>
+              <p>
+                O currículo também inclui disciplinas de design digital,
+                sistemas embarcados e ética organizacional, o que me preparou
+                para criar e gerenciar sistemas eficientes, seguros e éticos no
+                mercado de trabalho de TI.
+              </p>
+            </li>
+          </ul>
+          <li>
+            <h2>Cursos na Alura (2024):</h2>
+          </li>
+          <ul>
+            <li>
+              <h3>Java: Trabalhando com Listas e Coleções de Dados</h3>
             </li>
             <ul>
               <li>
                 <p>
-                  Atualmente estou cursando Análise e Desenvolvimento de Sistemas
-                  pela UNINTER, aprendo desde os fundamentos da computação e
-                  lógica de programação até tópicos avançados como inteligência
-                  artificial e computação em nuvem.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Desenvolvo habilidades em programação web e mobile, segurança da
-                  informação e gestão de startups. Também estudo engenharia de
-                  software e métodos ágeis para trabalhar eficientemente em
-                  projetos.
-                </p>
-              </li>
-              <li>
-                <p>
-                  As disciplinas eletivas me permitem explorar áreas como big data
-                  e blockchain, proporcionando uma formação prática e abrangente
-                  para criar soluções tecnológicas inovadoras.
+                  Aprofundei meu conhecimento em estruturas de dados e
+                  manipulação de listas e coleções.
                 </p>
               </li>
             </ul>
             <li>
-              <h2>Desenvolvimento de Sistemas - ETEC (2023):</h2>
+              <h3>Java: Trabalhando com Lambdas, Streams e Spring Framework</h3>
             </li>
             <ul>
               <li>
                 <p>
-                  Curso técnico que oferece uma formação completa em tecnologia da
-                  informação.
+                  Introduzi-me ao Spring Framework, uma ferramenta poderosa para
+                  desenvolvimento Java.
                 </p>
               </li>
               <li>
                 <p>
-                  Aprendi a desenvolver sistemas em diversas linguagens de
-                  programação, principalmente java, análise de sistemas, segurança
-                  da informação e banco de dados, cobrindo desde os fundamentos
-                  até o desenvolvimento avançado de software web e mobile.
-                </p>
-              </li>
-              <li>
-                <p>
-                  O currículo também inclui disciplinas de design digital,
-                  sistemas embarcados e ética organizacional, o que me preparou
-                  para criar e gerenciar sistemas eficientes, seguros e éticos no
-                  mercado de trabalho de TI.
+                  Criar projetos, modelar dados, manipular coleções com streams
+                  e gerar estatísticas, culminando na aplicação prática desses
+                  conceitos avançados.
                 </p>
               </li>
             </ul>
             <li>
-              <h2>Cursos na Alura (2024):</h2>
+              <h3>Java: Aplicando a Orientação a Objetos</h3>
             </li>
             <ul>
               <li>
-                <h3>Java: Trabalhando com Listas e Coleções de Dados</h3>
+                <p>
+                  Fortaleci minha compreensão dos princípios de POO (Programação
+                  Orientada a Objetos), modelando aplicações, controlando o
+                  acesso aos dados, reutilizando características e aplicando
+                  comportamentos comuns, consolidando esses conceitos para o
+                  desenvolvimento de software eficiente e organizado.
+                </p>
               </li>
-              <ul>
-                <li>
-                  <p>
-                    Aprofundei meu conhecimento em estruturas de dados e
-                    manipulação de listas e coleções.
-                  </p>
-                </li>
-              </ul>
-              <li>
-                <h3>Java: Trabalhando com Lambdas, Streams e Spring Framework</h3>
-              </li>
-              <ul>
-                <li>
-                  <p>
-                    Introduzi-me ao Spring Framework, uma ferramenta poderosa para
-                    desenvolvimento Java.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    Criar projetos, modelar dados, manipular coleções com streams
-                    e gerar estatísticas, culminando na aplicação prática desses
-                    conceitos avançados.
-                  </p>
-                </li>
-              </ul>
-              <li>
-                <h3>Java: Aplicando a Orientação a Objetos</h3>
-              </li>
-              <ul>
-                <li>
-                  <p>
-                    Fortaleci minha compreensão dos princípios de POO (Programação
-                    Orientada a Objetos), modelando aplicações, controlando o
-                    acesso aos dados, reutilizando características e aplicando
-                    comportamentos comuns, consolidando esses conceitos para o
-                    desenvolvimento de software eficiente e organizado.
-                  </p>
-                </li>
-              </ul>
-              <li>
-                <h3>
-                  Java: consumindo API, gravando arquivos e lidando com erros
-                </h3>
-              </li>
-              <ul>
-                <li>
-                  <p>
-                    Como interagir com APIs externas, usar bibliotecas, tratar
-                    exceções e gravar dados em arquivos, consolidando esses
-                    conhecimentos para criar aplicações robustas.
-                  </p>
-                </li>
-              </ul>
             </ul>
-            <li><h2>E mais de 30 outros cursos em áreas correlatas...</h2></li>
-          </ol>
+            <li>
+              <h3>
+                Java: consumindo API, gravando arquivos e lidando com erros
+              </h3>
+            </li>
+            <ul>
+              <li>
+                <p>
+                  Como interagir com APIs externas, usar bibliotecas, tratar
+                  exceções e gravar dados em arquivos, consolidando esses
+                  conhecimentos para criar aplicações robustas.
+                </p>
+              </li>
+            </ul>
+          </ul>
+          <li><h2>E mais de 30 outros cursos em áreas correlatas...</h2></li>
+        </ol>
       </section>
+      <!-- A Section portfolio descreve alguns projetos feitos, suas respectivas linguagens e um link do projeto hospedado-->
       <section id="portfolio" class="padding">
         <h1>Portfólio</h1>
         <div class="projects">
           <div class="project">
-            
-            <img src="img/portfolio/calculadora-iss.png" alt="Imagem mostra um campo com valores escritos e do outro lado um campo mostrando o resultado do cálculo destes valores." />
+            <img
+              src="img/portfolio/calculadora-iss.png"
+              alt="Imagem mostra um campo com valores escritos e do outro lado um campo mostrando o resultado do cálculo destes valores."
+            />
             <h2>Calculadora de ISS</h2>
-            <p>Sistema para cálculo de tributos de alvarás de construção e demolição da cidade de Mongaguá/SP.</p>
-            <p>HTML5 | CSS3 | JS <a href="https://iss-calculadora.netlify.app/iss-js/iss com demolicao//" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+            <p>
+              Sistema para cálculo de tributos de alvarás de construção e
+              demolição da cidade de Mongaguá/SP.
+            </p>
+            <p>
+              HTML5 | CSS3 | JS
+              <a
+                href="https://iss-calculadora.netlify.app/iss-js/iss com demolicao//"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+              >
+                &#x1F310;</a
+              >
+            </p>
           </div>
           <div class="project">
-            <img src="img/portfolio/hardware-and-cia.png" alt="Imagem mostra a página inicial de um Ecommerce com seus produtos a venda." />
+            <img
+              src="img/portfolio/hardware-and-cia.png"
+              alt="Imagem mostra a página inicial de um Ecommerce com seus produtos a venda."
+            />
             <h2>Hardware & CIA</h2>
-            <p>Projeto feito em equipe de um Ecommerce de dispositivos eletrônicos.</p>
-            <p>HTML5 | CSS3 | JS | PHP | SQL <a href="https://luc033.github.io/Hardware-and-Cia/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+            <p>
+              Projeto feito em equipe de um Ecommerce de dispositivos
+              eletrônicos.
+            </p>
+            <p>
+              HTML5 | CSS3 | JS | PHP | SQL
+              <a
+                href="https://luc033.github.io/Hardware-and-Cia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+              >
+                &#x1F310;</a
+              >
+            </p>
           </div>
           <div class="project">
-            <img src="img/portfolio/sistema-bancario.png" alt="Imagem mostra o menu de um sistea bancário." />
+            <img
+              src="img/portfolio/sistema-bancario.png"
+              alt="Imagem mostra o menu de um sistea bancário."
+            />
             <h2>Sistema bancário</h2>
             <p>Um sistema com funções básicas de um banco.</p>
-            <p>JAVA <a href="https://github.com/Luc033/desafio-sistema-bancario" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+            <p>
+              JAVA
+              <a
+                href="https://github.com/Luc033/desafio-sistema-bancario"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+              >
+                &#x1F310;</a
+              >
+            </p>
           </div>
           <div class="project">
-            <img src="img/portfolio/via-cep.png" alt="Foto do Lucas de perfil" />
+            <img
+              src="img/portfolio/via-cep.png"
+              alt="Foto do Lucas de perfil"
+            />
             <h2>API CEP</h2>
-            <p>Utilizando API para retornar o endereço completo através do CEP fornecido.</p>
-            <p>JAVA <a href="https://github.com/Luc033/via-cep" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> &#x1F310;</a></p>
+            <p>
+              Utilizando API para retornar o endereço completo através do CEP
+              fornecido.
+            </p>
+            <p>
+              JAVA
+              <a
+                href="https://github.com/Luc033/via-cep"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration: none"
+              >
+                &#x1F310;</a
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -484,11 +569,11 @@
           <button type="submit">Enviar</button>
         </form>
         <div class="div-link-contact">
-          <a style="text-decoration: none; color: white;" target="_blank" href="https://www.linkedin.com/in/lucas-melo-dev"
-            >Linkedin
+          <a target="_blank" href="https://www.linkedin.com/in/lucas-melo-dev"
+            ><i class="fa-brands fa-linkedin"></i>
           </a>
-          <a style="text-decoration: none; color: white;" target="_blank" href="https://www.github.com/Luc033">
-            Github
+          <a target="_blank" href="https://www.github.com/Luc033">
+            <i class="fa-brands fa-square-github fa-xx"></i>
           </a>
           <p>&copy; 2024. Todos os direitos reservados.</p>
         </div>
